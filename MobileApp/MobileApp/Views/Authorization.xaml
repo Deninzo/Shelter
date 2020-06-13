@@ -7,9 +7,9 @@
              x:Class="MobileApp.Views.Authorization">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Editor Placeholder="Login" Text="{Binding Login}"/>
+            <Editor Placeholder="Password" Text="{Binding Password}"/>
+            <Button Clicked="InputClick"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

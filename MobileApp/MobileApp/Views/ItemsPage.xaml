@@ -9,7 +9,7 @@
              x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
+        <ToolbarItem Text="Войти" Clicked="Login_Clicked" />
     </ContentPage.ToolbarItems>
 
     <StackLayout>
