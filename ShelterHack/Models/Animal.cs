@@ -9,10 +9,13 @@ namespace ShelterHack.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Sex { get; set; }
+        public string TagNumber { get; set; }
         public string Description { get; set; }
         public DateTime ArrivedInShelter { get; set; }
         public Shelter ShelterContainer { get; set; }
         public string Photo { get; set; }
         public CatchServiceEmployee Catcher { get; set; }
+        public Breed Breed { get; set; }
     }
 }

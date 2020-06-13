@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using ShelterHack.Models;
@@ -9,9 +10,10 @@ using ShelterHack.Models;
 namespace ShelterHack.Migrations
 {
     [DbContext(typeof(ShelterContext))]
-    partial class ShelterContextModelSnapshot : ModelSnapshot
+    [Migration("20200613071035_SomeFixes")]
+    partial class SomeFixes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
