@@ -30,7 +30,7 @@ namespace MobileApp.Views
 
             if (result)
             {
-                await Navigation.PushAsync(new NavigationPage(new ItemsPage()));
+                await Navigation.PushAsync(new AnimalsView());
             }
             else
             {

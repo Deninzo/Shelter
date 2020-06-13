@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ShelterHack.DTO;
 using ShelterHack.Models;
 
 namespace ShelterHack.Controllers
@@ -22,9 +23,22 @@ namespace ShelterHack.Controllers
 
         // GET: api/Animals
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Animal>>> GetAnimals()
+        public async Task<ActionResult<IEnumerable<AnimalDto>>> GetAnimals()
         {
-            return await _context.Animals.ToListAsync();
+            return await _context.Animals.Select(x => new AnimalDto
+            {
+                ArrivedInShelter = x.ArrivedInShelter,
+                Breed = x.Breed.Name,
+                Name = x.Name,
+                Catcher = x.Catcher.FullName,
+                Description = x.Description,
+                Id = x.Id,
+                Photo = x.Photo,
+                Sex = x.Sex,
+                ShelterContainer = x.ShelterContainer.Name,
+                TagNumber = x.TagNumber
+            })
+                .ToListAsync();
         }
 
         // GET: api/Animals/5

@@ -41,7 +41,7 @@ namespace MobileApp.Views
 
         async void Login_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new Authorization()), true);
+            await Navigation.PushAsync(new Authorization(), true);
         }
 
         protected override void OnAppearing()

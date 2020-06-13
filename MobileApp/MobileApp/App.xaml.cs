@@ -15,7 +15,7 @@ namespace MobileApp
 
             DependencyService.Register<MockDataStore>();
             DependencyService.Register<HttpService>();
-            MainPage = new NavigationPage(new ItemsPage());
+            MainPage = new NavigationPage(new AnimalsView());
         }
 
         protected override void OnStart()
