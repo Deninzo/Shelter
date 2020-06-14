@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MobileApp.Views.AnimalPage" Title="{Binding Title}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="{Binding Animal.Photo}"/>
+                <Label Text="{Binding Animal.Name, StringFormat='Кличка: {0}'}"/>
+                <Label Text="{Binding Animal.Sex, StringFormat='Пол: {0}'}"/>
+                <Label Text="{Binding Animal.Description, StringFormat='Описание: {0}'}"/>
+                <Label Text="{Binding Animal.ArrivedInShelter, StringFormat='Дата приема в приют: {0:dd.MM.yyyy}'}"/>
+                <Label Text="{Binding Animal.ShelterContainer, StringFormat='Приют: {0}'}"/>
+                <Label Text="{Binding Animal.Breed, StringFormat='Порода: {0}'}"/>
+                <Button Text="Забрать себе" VerticalOptions="End"/>
+                <Button Text="Стать виртуалным хозяином животного" VerticalOptions="End"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

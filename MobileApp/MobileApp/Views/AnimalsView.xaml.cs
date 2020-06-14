@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MobileApp.ViewModels;
+using ShelterHack.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,16 +19,27 @@ namespace MobileApp.Views
             InitializeComponent();
 
             BindingContext = _viewModel = new AnimalsPageViewModel();
+
         }
 
-        private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            
+            await Navigation.PushAsync(new AnimalPage((e.SelectedItem as Animal)));
         }
 
         private async void AnimalsView_OnAppearing(object sender, EventArgs e)
         {
             await _viewModel.LoadAnimals();
+        }
+
+        async void Login_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Authorization(), true);
+        }
+
+        private async void MakeReport(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MakeReportPage());
         }
     }
 }

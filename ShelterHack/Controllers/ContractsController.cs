@@ -24,7 +24,10 @@ namespace ShelterHack.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Contract>>> GetContracts()
         {
-            return await _context.Contracts.ToListAsync();
+            return await _context.Contracts
+                .Include(x => x.Requests)
+                .ThenInclude(x => x.DeclarantShelter)
+                .ToListAsync();
         }
 
         // GET: api/Contracts/5

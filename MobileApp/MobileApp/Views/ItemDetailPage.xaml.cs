@@ -20,6 +20,7 @@ namespace MobileApp.Views
             InitializeComponent();
 
             BindingContext = this.viewModel = viewModel;
+
         }
 
         public ItemDetailPage()

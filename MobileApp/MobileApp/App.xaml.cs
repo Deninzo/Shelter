@@ -8,6 +8,7 @@ namespace MobileApp
 {
     public partial class App : Application
     {
+        public static bool IsAdmin = false;
 
         public App()
         {
@@ -16,6 +17,7 @@ namespace MobileApp
             DependencyService.Register<MockDataStore>();
             DependencyService.Register<HttpService>();
             MainPage = new NavigationPage(new AnimalsView());
+            
         }
 
         protected override void OnStart()

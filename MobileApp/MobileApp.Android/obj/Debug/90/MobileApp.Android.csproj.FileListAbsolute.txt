@@ -472,3 +472,6 @@ C:\Users\Denis\source\repos\ShelterHack\MobileApp\MobileApp.Android\obj\Debug\90
 C:\Users\Denis\source\repos\ShelterHack\MobileApp\MobileApp.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Denis\source\repos\ShelterHack\MobileApp\MobileApp.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Denis\source\repos\ShelterHack\MobileApp\MobileApp.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Users\Denis\source\repos\ShelterHack\MobileApp\MobileApp.Android\obj\Debug\90\res\drawable\tuzik.png
+C:\Users\Denis\source\repos\ShelterHack\MobileApp\MobileApp.Android\obj\Debug\90\res\drawable\bobick.png
+C:\Users\Denis\source\repos\ShelterHack\MobileApp\MobileApp.Android\obj\Debug\90\res\drawable\logo.png

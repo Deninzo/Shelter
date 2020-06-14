@@ -9,7 +9,8 @@
         <StackLayout>
             <Editor Placeholder="Login" Text="{Binding Login}"/>
             <Editor Placeholder="Password" Text="{Binding Password}"/>
-            <Button Clicked="InputClick"></Button>
+            <Button Clicked="InputClick" Text="Войти"/>
+            <Button Text="Регистрация"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

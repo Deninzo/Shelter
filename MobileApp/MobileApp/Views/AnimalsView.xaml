@@ -4,10 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="MobileApp.Views.AnimalsView" Appearing="AnimalsView_OnAppearing">
+             x:Class="MobileApp.Views.AnimalsView" Appearing="AnimalsView_OnAppearing" Title="Животные">
 
 
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Подать жалобу" Clicked="MakeReport"/>
+        <ToolbarItem Text="Войти" Clicked="Login_Clicked" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
 
         <StackLayout>
@@ -24,12 +27,13 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="10">
+                                <Image HorizontalOptions="Center" Source="{Binding Photo}"></Image>
                                 <Label Text="{Binding Name}" 
                                        d:Text="{Binding .}"
                                        LineBreakMode="NoWrap" 
                                        Style="{DynamicResource ListItemTextStyle}" 
                                        FontSize="16" />
-                                <Label Text="{Binding Sex}" 
+                                <Label Text="{Binding Description}" 
                                        d:Text="Item descripton"
                                        LineBreakMode="NoWrap"
                                        Style="{DynamicResource ListItemDetailTextStyle}"

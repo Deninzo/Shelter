@@ -22,6 +22,8 @@ namespace MobileApp.ViewModels
 
         public async Task LoadAnimals()
         {
+            Animals.Clear();
+
             var result = await _httpService.GetAnimals();
 
             foreach (var animal in result)

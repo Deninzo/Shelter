@@ -22,15 +22,36 @@ namespace MobileApp.Views
             _httpService = DependencyService.Get<HttpService>();
 
             BindingContext = _viewModel = new AuthorizationViewModel();
+            NavigationPage.SetTitleIconImageSource(this, "logo.png");
+
         }
 
         private async void InputClick(object sender, EventArgs e)
         {
             var result = await _viewModel.DoLogin();
 
-            if (result)
+            if (result != null)
             {
-                await Navigation.PushAsync(new AnimalsView());
+                switch (result.Role.Id)
+                {
+                    case 1:
+                    {
+                        await Navigation.PushAsync(new AnimalsView());
+                        break;
+                    }
+                    case 2:
+                    {
+                        await Navigation.PushAsync(new ContractsPage());
+                        App.IsAdmin = false;
+                        break;
+                    }
+                    case 4:
+                    {
+                        App.IsAdmin = true;
+                        await Navigation.PushAsync(new ContractsPage());
+                        break;
+                    }
+                }
             }
             else
             {

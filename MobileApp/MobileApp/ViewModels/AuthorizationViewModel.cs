@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using MobileApp.Services;
+using ShelterHack.Models;
 using Xamarin.Forms;
 
 namespace MobileApp.ViewModels
@@ -38,9 +39,9 @@ namespace MobileApp.ViewModels
             }
         }
 
-        public async Task<bool> DoLogin()
+        public async Task<AuthData> DoLogin()
         {
-            if (string.IsNullOrEmpty(Login) || string.IsNullOrEmpty(Password)) return false;
+            if (string.IsNullOrEmpty(Login) || string.IsNullOrEmpty(Password)) return null;
 
             return await _httpService.Authorization(Login, Password);
         }

@@ -9,10 +9,28 @@
     <Application.Resources>
         <ResourceDictionary>
             <!--Global Styles-->
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="NavigationPrimary">#2c679f</Color>
+            <Color x:Key="Second">#f57336</Color>
+
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="BarTextColor" Value="White" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Second}" />
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="TextColor" Value="Black"></Setter>
+            </Style>
+
+            <Style TargetType="Editor">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="PlaceholderColor" Value="{StaticResource Second}"></Setter>
             </Style>
         </ResourceDictionary>
     </Application.Resources>
